@@ -1,0 +1,19 @@
+🔥 PYTHON (1 line does everything)
+name = input("What is your name? ")
+print(name)
+
+
+input() = prints the message AND waits for typing.
+It’s System.out + cin in ONE move.
+
+🔥 JAVA (must do both separately)
+System.out.print("What is your name? ");
+Scanner cin = new Scanner(System.in);
+String name = cin.nextLine();
+System.out.println(name);
+
+🔥 C++ (also two steps)
+cout << "What is your name? ";
+string name;
+cin >> name;
+cout << name;
