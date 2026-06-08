@@ -2,7 +2,7 @@ import math
 
 # this is what we have so far 
 
-# course = "Python for Beginners"
+# course = "Python Full Course for Beginners"
 
 # len(course)          # how many characters in the string
 # course.upper()       # whole string to uppercase
@@ -29,7 +29,7 @@ year_integer = int(year);
 
 age = 2025 - year_integer;
 
-f"..."  # f-string: Python's shortcut. Anything in { } gets replaced with the value.
+#f"..{}."  # f-string: Python's shortcut. Anything in { } gets replaced with the value.
         # It's the easiest way to build a sentence using variables.
 
 print (f"you are about  {age}  years old" );
@@ -38,9 +38,9 @@ print (f"you are about  {age}  years old" );
 #get an index
 name = "Tony Daniels";
 print(f"total characters/indexes in  {name} is {len(name)} letters");
-print(f"the index number 5 in {name} is letter {name[5]}")
 #to upper cas. Note this takes the string and makes a brqnd new string
 name_upper = name.upper();
+print(f"the index number 5 in {name} is letter {name[5]}")
 #lowercase
 name_lower = name_upper.lower()+ " updated";
 print(name_upper);
@@ -58,8 +58,9 @@ y = int(x)
 print (y);
 
 a = 10/3
+# 🔥 python special: the // if for it to print an integer 🔥
 b = 10//3
-print(f"a ={a} and b is simply {b} because of the //. it makes it into a floor or int")
+print(f"a ={a} a`nd b is simply {b} because of the //. it makes it into a floor or int")
 c = 10+3*2**3;
 print(f"PEMDAS: the ** is exponents so 2^3 then 8*3 then 24 + 10 is: {c}");
 print()
@@ -70,3 +71,10 @@ print(''' also this is fire
 d = abs(-10.256);
 print(f"absolute value of -{d} = {d}")
 print(f"floor of {d} is ({math.floor(d)}");
+
+height = 1.75;
+
+if height >= 1.75:
+      print(f"your heighgt is {height} so bruh, you tall as shyt. go on the ride")
+else:
+      print("you a lil nigga");  
