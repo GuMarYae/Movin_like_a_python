@@ -74,7 +74,7 @@ print("Number of items in mySet: ", len(mySet))
 print("Is 'green' in mySet: ", "green" in mySet)
 
 ## we're gonna append some stuff in the set
-## or, just re-set the myList. myList was never affected
+## or, just re-set the myList. myList was never affcted
 mySet = set(myList)
 mySet.add("indigo")
 print("mySet: ", mySet)
@@ -185,8 +185,84 @@ myDictionary.values()
 # Get all key-value pairs
 myDictionary.items()
 
-otherDictionary = {"Eve": "555-3333", "Frank": "555-4444"}
-
+otherDictionary = {
+    "Eve": "555-3333",
+    "Frank": "555-4444",
+    "Grace": "555-5555",
+    "Henry": "555-6666",
+    "Isabella": "555-7777",
+    "Jack": "555-8888",
+    "Karen": "555-9999",
+    "Liam": "555-0000",
+    "Mia": "555-1111",
+    "Noah": "555-2222",
+    "Olivia": "555-1212",
+    "Peter": "555-3434",
+    "Quinn": "555-5656",
+    "Rachel": "555-7878",
+    "Sam": "555-9090",
+    "Taylor": "555-2468",
+    "Uma": "555-1357",
+    "Victor": "555-8642",
+    "Wendy": "555-9753",
+    "Xavier": "555-1478",
+    "Yasmine": "555-2589",
+    "Zach": "555-3690"
+}
 # Update one dictionary with another
 myDictionary.update(otherDictionary)
 print("the dictionary is updated to: ", myDictionary)
+
+for key in myDictionary:
+    print("the names in this dictionary are : ", key)
+
+for i in range(len(myDictionary)):
+    print(i)
+    
+print("max lengthe is: ",len(myDictionary))
+
+##does not work because dictinaries does not use indexes
+##for i in range(len(myDictionary)):
+##    print(i,myDictionary[i])
+
+# Dictionaries do NOT use integer indexes like lists.
+# enumerate() creates a counting index while looping
+# through the dictionary's keys.
+
+for index, key in enumerate(myDictionary):
+    print("index:", index, "key:", key)
+
+# enumerate() gives you:
+# 1. An index (0, 1, 2, ...)
+# 2. The key
+# 3. The value associated with that key
+
+for index, (key, value) in enumerate(myDictionary.items()):
+    print("index:", index, "key:", key, "value:", value)
+    
+#############################dictionary methods##################### 
+# Get the value associated with the key "Alice".
+myDictionary.get("Alice")
+
+# Get all key-value pairs.
+myDictionary.items()
+
+# Get all the keys.
+myDictionary.keys()
+
+# Get all the values.
+myDictionary.values()
+
+# Update the left dictionary with the contents of another dictionary.
+myDictionary.update(otherDictionary)
+
+# Remove the key "Alice" and its associated value.
+myDictionary.pop("Alice")
+
+# Remove all key-value pairs from the dictionary.
+myDictionary.clear()
+
+# Make a copy of the dictionary.
+myDictionary.copy()
+
+    
