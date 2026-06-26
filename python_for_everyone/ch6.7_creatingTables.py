@@ -8,6 +8,18 @@ for i in range(ROWS):   #so, i is in range up to 5
     table.append(row)
     #we're appending [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] to table and we're gonna do that 4 more times 
     
-for i in table:
-    print(i)
-    
+def check_table():
+    for i in table:
+        print(i)
+print(check_table())
+
+table[3][9] = "tony"
+print(check_table())
+table [3][9] = 0
+print(check_table())
+
+index = 0
+for index in table:
+    table[index] = index
+    print (index)
+    index+=1

@@ -53,7 +53,7 @@ So we add 1 to reach the real max.
 
 # FOR LOOPS, range(), AND len() CHEAT SHEET
 
-## 1. Use Neither When You Only Need the Values
+## 1. Use When You Only Need the Values
 
 ```python
 friends = ["Harry", "Emily", "Bob"]
