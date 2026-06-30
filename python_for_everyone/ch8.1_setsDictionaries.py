@@ -222,6 +222,9 @@ for i in range(len(myDictionary)):
 print("max lengthe is: ",len(myDictionary))
 
 ##does not work because dictinaries does not use indexes
+# 💥 range() makes i an integer.
+# Dictionaries do not use integer indexes, only keys.
+# So this gives a KeyError.
 ##for i in range(len(myDictionary)):
 ##    print(i,myDictionary[i])
 
@@ -245,6 +248,7 @@ for index, (key, value) in enumerate(myDictionary.items()):
 myDictionary.get("Alice")
 
 # Get all key-value pairs.
+# an item is a key and a value
 myDictionary.items()
 
 # Get all the keys.
@@ -265,4 +269,68 @@ myDictionary.clear()
 # Make a copy of the dictionary.
 myDictionary.copy()
 
+############################################################
+############### RECAP: STORING POPPED VALUES ################
+############################################################
+
+######################## LIST ########################
+
+# Store a popped list item in a variable.
+poppedListItem = myList.pop()
+
+# Store a popped list item in another list.
+removedList = []
+removedList.append(myList.pop())
+
+
+######################## SET #########################
+
+# Store a popped set item in a variable.
+poppedSetItem = mySet.pop()
+
+# Store a popped set item in another list.
+removedSetItems = []
+removedSetItems.append(mySet.pop())
+
+
+##################### DICTIONARY #####################
+
+# Store the popped VALUE in a variable.
+poppedValue = myDictionary.pop("Alice")
+
+# Store the popped key-value pair in another dictionary.
+removedDictionary = {}
+removedDictionary["Bob"] = myDictionary.pop("Bob")
+
+
+
+###############################################################################
+############### RECAP: WHY range() + [i] DOESN'T WORK IN DICTIONARIES #########
+############### OR WHY myDictionary[i] DOESN'T WORK ###########################
+####################### SAME THING ############################################
+###############################################################################
+
+# ❌ WRONG: range() makes i an integer (0, 1, 2, ...).
+# Dictionaries use keys ("Alice", "Bob", ...) instead of integer indexes.
+for i in range(len(myDictionary)):          # i = 0, then 1, then 2, ...
+    print(myDictionary[i])                  # Looks for integer keys 0, 1, 2...
+                                            # But the dictionary's keys are strings like "Alice", "Bob", ...
+                                            # Since keys 0, 1, 2 don't exist, Python raises a KeyError.
+
+
+# ✅ RIGHT: Loop directly through the dictionary.
+# i becomes each key instead of an integer.
+for i in myDictionary:                      # i = "Alice", then "Bob", then "Charlie", ...
+    print(i)                                # Prints the current key.
+    print(myDictionary[i])                  # Uses the current key to get its matching value.
+
+
+# ✅ RIGHT: Use range() only when you need a counter.
+for i in range(len(myDictionary)):          # i = 0, then 1, then 2, ...
+    print(i)                                # Prints only the counter, not dictionary values.
+
+
+# ✅ BEST: Use enumerate() when you want both a counter and the dictionary's keys.
+for index, key in enumerate(myDictionary):  # index = 0,1,2...   key = "Alice","Bob","Charlie",...
+    print(index, key)                       # Prints both the counter and the key.
     
