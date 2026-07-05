@@ -1,0 +1,2 @@
+
+currentSecond = (secondsTOT % 60)
