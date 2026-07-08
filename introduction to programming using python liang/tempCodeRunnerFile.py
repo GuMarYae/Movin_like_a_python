@@ -1,2 +1,1 @@
-
-currentSecond = (secondsTOT % 60)
+Final score
