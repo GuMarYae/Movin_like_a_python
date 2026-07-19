@@ -3,7 +3,7 @@ def main():
     j = 4
     k = 2
     i = 3
-
+###############################################################################
     # Nested if statement example.
     # The second if only runs if the first if is True.
     if (i > k):
@@ -14,7 +14,7 @@ def main():
     # It only runs when i is less than or equal to k.
     else:
         print("i is less than or equal to k")
-
+###############################################################################
     # Another nested if example.
     if (i > k):
         if (j > k):
@@ -23,6 +23,9 @@ def main():
         # It only runs when j is less than or equal to k.
         else:
             print("j is less than or equal to k")
+    # Again, this one only runs when i is less than or equal to k. This is the most complete version of the two
+    else:
+        print("i is less than or equal to k")
 
 
 
@@ -30,7 +33,7 @@ def main():
     # Nested if/else version
     # ---------------------------------------------------------
 
-    score = 89
+    score = 55
     grade = "F"
 
     if (score == 100):
@@ -56,6 +59,9 @@ def main():
 
                     else:
                         grade = "F"
+                        # notice where print is. this only represents if grade < 60
+                        # Because its indented under the else statement
+                        print("suck")
 
     # We moved back to the left because ALL of the if statements are finished.
     # This print() runs no matter which grade was assigned.
