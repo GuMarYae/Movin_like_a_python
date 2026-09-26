@@ -27,9 +27,42 @@ matrix = [[23, 44, 12],
 #
 # So maxColumns = 4
 
+
+# 🔥 IMPORTANT:
+#
+# "for row in matrix" goes through EACH row:
+#
+# [23, 44, 12]       -> len(row) = 3
+# [12, 17, 1, 100]   -> len(row) = 4
+# [217, 777, 18]      -> len(row) = 3
+#
+# So this part:
+#
+# len(row) for row in matrix
+#
+# produces:
+#
+# 3, 4, 3
+#
+# Then max() grabs the BIGGEST number:
+#
+# max(3, 4, 3) = 4
+#
+# This means we DO NOT have to manually write:
+#
+# maxColumns = 4
+#
+# Python figures out the maximum number of columns
+# automatically based on the longest row.
+#
+# If the matrix changes and another row becomes longer,
+# maxColumns will automatically change too.
+
+
 # this 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 
 maxColumns = max(len(row) for row in matrix)
 #      🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 
+
 
 # range(maxColumns)
 # range(4)
@@ -40,7 +73,22 @@ maxColumns = max(len(row) for row in matrix)
 
 for column in range(maxColumns):
 
+    # Reset total to 0 for EACH new column.
+    #
+    # column 0 gets its own total
+    # column 1 gets its own total
+    # column 2 gets its own total
+    # column 3 gets its own total
+
     total = 0
+
+
+    # len(matrix) = 3 because there are 3 rows.
+    #
+    # range(3) -> 0, 1, 2
+    #
+    # This lets us check the current column
+    # against every row.
 
     for row in range(len(matrix)):
 
@@ -77,7 +125,22 @@ for column in range(maxColumns):
 
         if column < len(matrix[row]):
 
+            # If the column EXISTS in this row,
+            # grab that value and add it to total.
+            #
+            # Example for column 0:
+            #
+            # matrix[0][0] = 23
+            # matrix[1][0] = 12
+            # matrix[2][0] = 217
+            #
+            # total = 23 + 12 + 217
+            # total = 252
+
             total = total + matrix[row][column]
 
+
+    # The row loop is finished.
+    # We now have the complete total for this column.
 
     print("total sum for column:", column, "is", total)
