@@ -94,7 +94,7 @@ print(totalMinutes, "minutes is approximately", years, "years and", days, "days.
 #
 #     4️⃣ Subtract it from a.
 #
-#     5️⃣ 🎉 Whatever is LEFT OVER is the answer!
+#     5️⃣ 🎉 Whatever is LEFT OVER is the answer! the remainder
 #
 # Example:
 #
@@ -131,7 +131,7 @@ print(totalMinutes, "minutes is approximately", years, "years and", days, "days.
 #
 # Once you start thinking:
 #
-#     % = "What's left over?"
+#    💥 % = "What's left over?"
 #
 # instead of:
 #

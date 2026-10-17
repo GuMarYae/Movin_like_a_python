@@ -1,4 +1,3 @@
-
 # PYTHON BUILT-IN FUNCTIONS, METHODS, AND KEYWORDS CHEAT SHEET
 
 # ============================================================
@@ -11,36 +10,36 @@
 
 # They DO NOT need an object with a dot.
 
-print()      # Prints output
-input()      # Gets user input
+print() # Prints output
+input() # Gets user input
 
-int()        # Converts to integer
-float()      # Converts to floating-point number
-str()        # Converts to string
-list()       # Creates or converts to a list
-tuple()      # Creates or converts to a tuple
-set()        # Creates or converts to a set
-dict()       # Creates or converts to a dictionary
-bool()       # Converts to True or False
+int() # Converts to integer
+float() # Converts to floating-point number
+str() # Converts to string
+list() # Creates or converts to a list
+tuple() # Creates or converts to a tuple
+set() # Creates or converts to a set
+dict() # Creates or converts to a dictionary
+bool() # Converts to True or False
 
-len()        # Returns number of items
-sum()        # Adds numeric items
-min()        # Returns smallest item
-max()        # Returns largest item
-sorted()     # Returns a sorted copy
-round()      # Rounds a number
-abs()        # Returns absolute value
-pow()        # Raises a number to a power
+len() # Returns number of items
+sum() # Adds numeric items
+min() # Returns smallest item
+max() # Returns largest item
+sorted() # Returns a sorted copy
+round() # Rounds a number
+abs() # Returns absolute value
+pow() # Raises a number to a power
 
-range()      # Generates a sequence of numbers
-enumerate()  # Gives index and value while looping
-zip()        # Combines iterables
+range() # Generates a sequence of numbers
+enumerate() # Gives index and value while looping
+zip() # Combines iterables
 
-type()       # Shows data type
+type() # Shows data type
 isinstance() # Checks an object's type
 
-open()       # Opens a file
-help()       # Shows help information
+open() # Opens a file
+help() # Shows help information
 
 # ============================================================
 
@@ -52,21 +51,21 @@ help()       # Shows help information
 
 # The DOT is the giveaway that these are methods.
 
-list1.append(x)       # Add one item to the end
-list1.extend(items)   # Add multiple items
-list1.insert(i, x)    # Insert item at an index
+list1.append(x) # Add one item to the end
+list1.extend(items) # Add multiple items
+list1.insert(i, x) # Insert item at an index
 
-list1.remove(x)       # Remove first matching value
-list1.pop()           # Remove and return last item
-list1.pop(i)          # Remove and return item at index
-list1.clear()         # Remove everything
+list1.remove(x) # Remove first matching value
+list1.pop() # Remove and return last item
+list1.pop(i) # Remove and return item at index
+list1.clear() # Remove everything
 
-list1.index(x)        # Find index of a value
-list1.count(x)        # Count occurrences
+list1.index(x) # Find index of a value
+list1.count(x) # Count occurrences
 
-list1.sort()          # Sort the list
-list1.reverse()       # Reverse the list
-list1.copy()          # Make a copy
+list1.sort() # Sort the list
+list1.reverse() # Reverse the list
+list1.copy() # Make a copy
 
 # ============================================================
 
@@ -74,25 +73,25 @@ list1.copy()          # Make a copy
 
 # ============================================================
 
-s.split()             # Split string into a list
-s.strip()             # Remove spaces from beginning/end
-s.lower()             # Convert to lowercase
-s.upper()             # Convert to uppercase
-s.capitalize()        # Capitalize first character
-s.title()             # Capitalize each word
+s.split() # Split string into a list
+s.strip() # Remove spaces from beginning/end
+s.lower() # Convert to lowercase
+s.upper() # Convert to uppercase
+s.capitalize() # Capitalize first character
+s.title() # Capitalize each word
 
-s.replace(a, b)       # Replace text
-s.find(x)             # Find position of text
-s.index(x)            # Find index of text
-s.count(x)            # Count occurrences
+s.replace(a, b) # Replace text
+s.find(x) # Find position of text
+s.index(x) # Find index of text
+s.count(x) # Count occurrences
 
-s.startswith(x)       # Check beginning
-s.endswith(x)         # Check ending
+s.startswith(x) # Check beginning
+s.endswith(x) # Check ending
 
-s.isdigit()           # Check if characters are digits
-s.isalpha()           # Check if characters are letters
-s.isalnum()           # Check if letters/numbers
-s.isspace()           # Check if whitespace
+s.isdigit() # Check if characters are digits
+s.isalpha() # Check if characters are letters
+s.isalnum() # Check if letters/numbers
+s.isspace() # Check if whitespace
 
 # ============================================================
 
@@ -100,16 +99,16 @@ s.isspace()           # Check if whitespace
 
 # ============================================================
 
-d.keys()              # Get all keys
-d.values()            # Get all values
-d.items()             # Get key/value pairs
+d.keys() # Get all keys
+d.values() # Get all values
+d.items() # Get key/value pairs
 
-d.get(key)            # Get a value
-d.update(other)       # Add/update entries
-d.pop(key)            # Remove a key
-d.popitem()           # Remove last inserted pair
-d.clear()             # Remove everything
-d.copy()              # Copy dictionary
+d.get(key) # Get a value
+d.update(other) # Add/update entries
+d.pop(key) # Remove a key
+d.popitem() # Remove last inserted pair
+d.clear() # Remove everything
+d.copy() # Copy dictionary
 
 # ============================================================
 
@@ -117,17 +116,17 @@ d.copy()              # Copy dictionary
 
 # ============================================================
 
-s.add(x)              # Add an item
-s.remove(x)           # Remove an item
-s.discard(x)          # Remove item safely
-s.pop()               # Remove an item
-s.clear()             # Remove everything
+s.add(x) # Add an item
+s.remove(x) # Remove an item
+s.discard(x) # Remove item safely
+s.pop() # Remove an item
+s.clear() # Remove everything
 
-s.union(other)        # Combine sets
+s.union(other) # Combine sets
 s.intersection(other) # Get common items
-s.difference(other)   # Get different items
-s.issubset(other)     # Check if subset
-s.issuperset(other)   # Check if superset
+s.difference(other) # Get different items
+s.issubset(other) # Check if subset
+s.issuperset(other) # Check if superset
 
 # ============================================================
 
@@ -251,9 +250,9 @@ print(position)
 
 # Because:
 
-# VALUE:  10  20   5  30
+# VALUE: 10 20 5 30
 
-# INDEX:   0   1   2   3
+# INDEX: 0 1 2 3
 
 # index() is a BUILT-IN LIST METHOD.
 
@@ -560,15 +559,15 @@ def
 
 # ============================================================
 
-input()          # Built-in function
-int()            # Built-in function
-range()          # Built-in function
-str()            # Built-in function
-float()          # Built-in function
-sum()            # Built-in function
-print()          # Built-in function
-list()           # Built-in function
+input() # Built-in function
+int() # Built-in function
+range() # Built-in function
+str() # Built-in function
+float() # Built-in function
+sum() # Built-in function
+print() # Built-in function
+list() # Built-in function
 
-s.split()        # Built-in string method
-matrix.append()  # Built-in list method
-list1.index()    # Built-in list method
+s.split() # Built-in string method
+matrix.append() # Built-in list method
+list1.index() # Built-in list method

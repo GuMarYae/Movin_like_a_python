@@ -1,0 +1,351 @@
+
+
+# 🔥 GOLDEN RULE: FUNCTION INVOCATION
+#
+# I DON'T GIVE A FUCK WHERE I SEE function()!
+# IF IT'S A FUNCTION CALL, IT'S BEING INVOKED AT THAT EXACT MOMENT!
+#
+# Python:     number(5)       -> INVOKES number() IMMEDIATELY.
+# Python:     range(10000)    -> INVOKES range() IMMEDIATELY.
+# C++:        number(5)       -> INVOKES number() IMMEDIATELY.
+# Node.js:    name()          -> INVOKES name() IMMEDIATELY.
+#
+# REMEMBER:
+# function() = CALL THE FUNCTION NOW.
+# function   = REFERENCE THE FUNCTION WITHOUT CALLING IT.
+#
+# EXCEPTION:
+# def name():             -> DEFINES A FUNCTION IN PYTHON.
+# void name() {}          -> DEFINES A FUNCTION IN C++.
+# const name = () => {}   -> DEFINES AN ARROW FUNCTION IN NODE.JS.
+#
+# THE PARENTHESES IN THESE DEFINITIONS DO NOT INVOKE THE FUNCTION.
+#
+# IMPORTANT:
+# A FUNCTION CAN EXECUTE WITHOUT PRINTING ANYTHING.
+################################################################################
+# YES, BRO! 🔥 METHODS ARE TREATED THE SAME WAY!
+
+# normal ex
+
+# floatNum.floor()  # Invokes the floor() method IMMEDIATELY.
+# import math
+
+# floatNum = 5.8
+# result = math.floor(floatNum)  # Invokes floor() immediately. Returns 5.
+################################################################################
+
+========================================================
+🔥 C++ EXAMPLE: CLASS CONSTRUCTOR INVOCATION
+========================================================
+
+#include <iostream>
+using namespace std;
+
+class PRINTTHISSSHYT {
+public:
+
+    // CONSTRUCTOR: AUTOMATICALLY INVOKED WHEN AN OBJECT IS CREATED.
+    PRINTTHISSSHYT() {
+        cout << "THIS SHYT PRINTED!" << endl;
+    }
+};
+
+int main() {
+
+    // CREATES AN OBJECT AND INVOKES THE CONSTRUCTOR IMMEDIATELY.
+    // THE cout INSIDE THE CONSTRUCTOR EXECUTES AUTOMATICALLY.
+    PRINTTHISSSHYT obj = PRINTTHISSSHYT();
+
+    // NO cout IS NEEDED INSIDE main().
+
+    return 0;
+}
+
+
+// OUTPUT:
+// THIS SHYT PRINTED!
+//
+// REMEMBER:
+// PRINTTHISSSHYT() -> INVOKES THE CONSTRUCTOR.
+// PRINTTHISSSHYT obj; -> ALSO INVOKES THE CONSTRUCTOR.
+//
+// 🔥 CREATING AN OBJECT CAN AUTOMATICALLY EXECUTE CODE
+// INSIDE ITS CONSTRUCTOR WITHOUT EXPLICITLY CALLING cout IN main().
+
+
+#___________________________________________________________________________________
+# nice version
+#__________________________________________________________________________________
+
+========================================================
+PROGRAMMING NOTES: ASSIGNMENT VS FUNCTION INVOCATION
+PYTHON AND C++
+========================================================
+
+1. THE MOST IMPORTANT RULE
+--------------------------------------------------------
+
+# ASSIGNMENT (=) DOES NOT AUTOMATICALLY INVOKE A FUNCTION.
+# THE EXPRESSION ON THE RIGHT DETERMINES WHAT HAPPENS.
+#
+# function() = CALLS THE FUNCTION IMMEDIATELY.
+# function   = REFERENCES THE FUNCTION WITHOUT CALLING IT.
+#
+# IMPORTANT:
+# INVOKING A FUNCTION DOES NOT AUTOMATICALLY PRINT ANYTHING.
+# THE FUNCTION MUST CONTAIN CODE THAT PRODUCES CONSOLE OUTPUT.
+#
+# ALSO REMEMBER:
+# () CAN HAVE OTHER MEANINGS, SUCH AS GROUPING EXPRESSIONS
+# OR CREATING AN EMPTY TUPLE IN PYTHON.
+
+
+2. PYTHON: NORMAL ASSIGNMENT VS FUNCTION INVOCATION
+--------------------------------------------------------
+
+# NORMAL ASSIGNMENT: NO FUNCTION IS INVOKED.
+num = 5
+
+# CREATE A FUNCTION THAT PRINTS AND RETURNS A VALUE.
+def number(x):
+    print("Function executed!")
+    return x * 2
+
+# FUNCTION INVOCATION:
+# Calls number(5) NOW and saves the returned result.
+# REMEMBER: The parentheses () invoke the function immediately.
+# Prints "Function executed!" because print() is inside the function.
+# invokeResult stores the returned value of 10.
+invokeResult = number(num)
+
+# NO INVOCATION:
+# Stores a reference to the function itself.
+functionReference = number
+
+# INVOCATION:
+# Calls the function through the stored reference.
+functionReference(5)
+
+
+3. PYTHON: WHAT IF THE FUNCTION HAS NO PRINT?
+--------------------------------------------------------
+
+def number(x):
+    return x * 2
+
+num = 5
+
+# FUNCTION EXECUTES IMMEDIATELY.
+# NOTHING PRINTS BECAUSE THE FUNCTION HAS NO print().
+# THE RETURNED VALUE 10 IS STORED IN invokeResult.
+invokeResult = number(num)
+
+# REMEMBER:
+# A FUNCTION CAN EXECUTE WITHOUT DISPLAYING ANYTHING.
+
+
+4. PYTHON: CLASS CONSTRUCTORS
+--------------------------------------------------------
+
+class Car:
+    def __init__(self):
+        print("Car constructor executed!")
+
+# CREATES AN OBJECT IMMEDIATELY.
+# Automatically executes the initialization method __init__().
+# Prints "Car constructor executed!".
+car1 = Car()
+
+# DOES NOT CREATE AN OBJECT.
+# Stores a reference to the Car class itself.
+car2 = Car
+
+# REMEMBER:
+# Car() = CREATE AN INSTANCE OF THE CLASS.
+# Car  = REFERENCE THE CLASS WITHOUT CREATING AN INSTANCE.
+
+
+5. C++: NORMAL ASSIGNMENT VS FUNCTION INVOCATION
+--------------------------------------------------------
+
+// C++ EXAMPLE:
+
+#include <iostream>
+using namespace std;
+
+int number(int x) {
+    cout << "Function executed!" << endl;
+    return x * 2;
+}
+
+int main() {
+
+    // NORMAL ASSIGNMENT: NO FUNCTION IS INVOKED.
+    int num = 5;
+
+    // FUNCTION INVOCATION:
+    // Calls number(5) immediately.
+    // Prints because cout is inside the function.
+    // Stores the returned value 10.
+    int invokeResult = number(num);
+
+    // NO INVOCATION:
+    // Stores a pointer to the function.
+    auto functionReference = number;
+
+    // INVOCATION:
+    // Calls the function through its pointer.
+    functionReference(5);
+
+    return 0;
+}
+
+
+6. C++: WHAT IF THE FUNCTION HAS NO COUT?
+--------------------------------------------------------
+
+// C++ EXAMPLE:
+
+int number(int x) {
+    return x * 2;
+}
+
+int main() {
+
+    int num = 5;
+
+    // FUNCTION EXECUTES IMMEDIATELY.
+    // NOTHING PRINTS BECAUSE THE FUNCTION HAS NO cout.
+    // THE RETURNED VALUE 10 IS STORED IN invokeResult.
+    int invokeResult = number(num);
+
+    return 0;
+}
+
+
+7. C++: CLASS CONSTRUCTORS
+--------------------------------------------------------
+
+// C++ EXAMPLE:
+
+#include <iostream>
+using namespace std;
+
+class Car {
+public:
+    Car() {
+        cout << "Car constructor executed!" << endl;
+    }
+};
+
+int main() {
+
+    // CREATES AN OBJECT AND INVOKES THE CONSTRUCTOR.
+    Car car = Car();
+
+    // ALSO CREATES AN OBJECT AND INVOKES THE CONSTRUCTOR.
+    Car car2;
+
+    // BOTH STATEMENTS CAUSE THE CONSTRUCTOR TO EXECUTE.
+    // NO cout IS NEEDED INSIDE main().
+    // THE CONSTRUCTOR ALREADY CONTAINS cout.
+
+    return 0;
+}
+
+
+8. QUICK COMPARISON
+--------------------------------------------------------
+
+PYTHON:
+
+num = 5
+# NORMAL ASSIGNMENT. NO FUNCTION INVOKED.
+
+x = number(5)
+# FUNCTION INVOKED IMMEDIATELY.
+
+x = number
+# FUNCTION REFERENCE STORED. NOT INVOKED.
+
+car = Car()
+# CLASS CALLED. OBJECT CREATED AND INITIALIZED.
+
+car = Car
+# CLASS REFERENCE STORED. NO OBJECT CREATED.
+
+
+C++:
+
+int num = 5;
+// NORMAL ASSIGNMENT. NO FUNCTION INVOKED.
+
+int x = number(5);
+// FUNCTION INVOKED IMMEDIATELY.
+
+auto x = number;
+// FUNCTION POINTER STORED. NOT INVOKED.
+
+Car car = Car();
+// OBJECT CREATED. CONSTRUCTOR INVOKED.
+
+Car car;
+// OBJECT CREATED. DEFAULT CONSTRUCTOR INVOKED.
+
+
+9. MOST IMPORTANT NOTES TO REMEMBER
+--------------------------------------------------------
+
+# ASSIGNMENT (=) STORES A VALUE OR REFERENCE.
+#
+# function() = INVOKES THE FUNCTION IMMEDIATELY.
+# function   = REFERENCES THE FUNCTION WITHOUT INVOKING IT.
+#
+# EXAMPLE:
+# num = 5
+# Stores the number 5.
+#
+# result = number(num)
+# Calls number() immediately and stores its returned value.
+#
+# reference = number
+# Stores the function itself without calling it.
+#
+# IMPORTANT:
+# A FUNCTION DOES NOT HAVE TO PRINT TO EXECUTE.
+# print() OR cout CAN PRODUCE OUTPUT FROM INSIDE THE FUNCTION.
+# return SENDS A VALUE BACK WITHOUT AUTOMATICALLY PRINTING IT.
+#
+# PYTHON CLASS EXAMPLE:
+# car = Car()
+# Creates an object immediately.
+#
+# car = Car
+# Stores a reference to the class itself.
+#
+# C++ CLASS EXAMPLE:
+# Car car = Car();
+# Creates an object and invokes its constructor.
+#
+# Car car;
+# ALSO creates an object and invokes its default constructor.
+
+
+10. GOLDEN RULE
+--------------------------------------------------------
+
+# "=" ASSIGNS.
+# "()" CALLS WHEN APPLIED TO A FUNCTION OR CLASS.
+# CALLING A FUNCTION DOES NOT MEAN IT WILL PRINT.
+# THE FUNCTION CAN EXECUTE AND RETURN A VALUE SILENTLY.
+#
+# C++ EXCEPTION TO REMEMBER:
+# Car car;
+# CREATES AN OBJECT AND INVOKES ITS CONSTRUCTOR
+# WITHOUT EXPLICITLY WRITING ().
+
+
+========================================================
+END OF NOTES
+========================================================

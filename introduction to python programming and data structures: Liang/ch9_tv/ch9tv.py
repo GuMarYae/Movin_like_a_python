@@ -44,6 +44,9 @@ class TV:
    #setters 
     def setVolumeLevel(self, volumeLevel):
         if (self.on):
+        # isinstance() makes sure the value entered is an integer.
+        # We need this because volume levels must be whole numbers,
+        # not strings, decimals, or other data types.
             if isinstance(volumeLevel, int) and volumeLevel < 101 and volumeLevel > 0:
                 self.volumeLevel = volumeLevel
             else:
@@ -52,6 +55,9 @@ class TV:
     def setChannel(self, channel):
         if self.on:
             #self means if the number entered is of an integer, less than 1000 and bigger than 0
+            # isinstance() makes sure the value entered is an integer.
+            # We need this because volume levels must be whole numbers,
+            # not strings, decimals, or other data types.
                 if isinstance(channel, int) and channel < 1000 and channel > 0:
                     self.channel = channel
                 else:
