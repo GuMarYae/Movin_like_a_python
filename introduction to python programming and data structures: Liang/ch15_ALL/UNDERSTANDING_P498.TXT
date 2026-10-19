@@ -1,0 +1,189 @@
+==================================================
+1. ORIGINAL MATHEMATICAL FORMULA
+==================================================
+
+fib(index) = fib(index - 2) + fib(index - 1); index >= 2
+
+The ; index >= 2 means the formula applies when index is 2 or greater.
+
+WHAT EACH PART MEANS:
+
+fib(index)     = Fibonacci value we're calculating
+=              = Equals
+fib(index - 2) = Fibonacci value two positions back
++              = Addition
+fib(index - 1) = Fibonacci value one position back
+;              = Separates the formula from its condition
+index >= 2     = Formula applies when index is 2 or greater
+
+IN ENGLISH:
+If index is 2 or greater, add the Fibonacci values from two positions back and one position back.
+
+==================================================
+2. REWRITTEN IN PYTHON
+==================================================
+
+# Original mathematical formula:
+# fib(index) = fib(index - 2) + fib(index - 1); index >= 2
+
+# Rewritten in Python:
+if index >= 2:
+    return fib(index - 2) + fib(index - 1)
+
+Both mean the same thing.
+
+==================================================
+3. COMPLETE PYTHON CODE (LONG WAY)
+==================================================
+
+def fib(index):
+    if index == 0:
+        return 0
+
+    elif index == 1:
+        return 1
+
+    elif index >= 2:
+        return fib(index - 2) + fib(index - 1)
+
+print(fib(5))  # Output: 5
+
+==================================================
+4. JAVA (LONG WAY)
+==================================================
+
+static int fib(int index) {
+    if (index == 0) {
+        return 0;
+    }
+    else if (index == 1) {
+        return 1;
+    }
+    else if (index >= 2) {
+        return fib(index - 2) + fib(index - 1);
+    }
+    return -1;
+}
+
+==================================================
+5. C++ (LONG WAY)
+==================================================
+
+int fib(int index) {
+    if (index == 0) {
+        return 0;
+    }
+    else if (index == 1) {
+        return 1;
+    }
+    else if (index >= 2) {
+        return fib(index - 2) + fib(index - 1);
+    }
+    return -1;
+}
+
+==================================================
+6. NODE.JS / JAVASCRIPT (LONG WAY)
+==================================================
+
+function fib(index) {
+    if (index === 0) {
+        return 0;
+    }
+    else if (index === 1) {
+        return 1;
+    }
+    else if (index >= 2) {
+        return fib(index - 2) + fib(index - 1);
+    }
+}
+
+==================================================
+7. ARE THESE TERNARY OPERATORS?
+==================================================
+
+NO.
+
+The original Fibonacci formula is mathematical notation, NOT a ternary operator.
+
+TERNARY / CONDITIONAL EXPRESSION SYNTAX:
+
+Python:
+value1 if condition else value2
+
+Java:
+condition ? value1 : value2
+
+C++:
+condition ? value1 : value2
+
+Node.js / JavaScript:
+condition ? value1 : value2
+
+A C++ ternary uses ? and :
+Java and JavaScript use the same symbols.
+Python uses if and else.
+
+==================================================
+8. TERNARY EXPRESSION EXAMPLES
+==================================================
+
+PYTHON:
+
+return index if index <= 1 else fib(index - 2) + fib(index - 1)
+
+JAVA:
+
+return index <= 1 ? index : fib(index - 2) + fib(index - 1);
+
+C++:
+
+return index <= 1 ? index : fib(index - 2) + fib(index - 1);
+
+NODE.JS / JAVASCRIPT:
+
+return index <= 1 ? index : fib(index - 2) + fib(index - 1);
+
+These examples assume index is a nonnegative integer.
+
+==================================================
+9. WHY INDEX >= 2?
+==================================================
+
+Because Fibonacci starts with two known values:
+
+fib(0) = 0
+fib(1) = 1
+
+These are the BASE CASES.
+
+Starting at index 2, the formula calculates each new Fibonacci value by adding the previous two.
+
+EXAMPLE: INDEX = 5
+
+fib(5) = fib(5 - 2) + fib(5 - 1)
+fib(5) = fib(3) + fib(4)
+fib(5) = 2 + 3
+fib(5) = 5
+
+==================================================
+FINAL TAKEAWAY
+==================================================
+
+; index >= 2
+
+This is a mathematical condition, NOT a ternary operator.
+
+Python:
+if index >= 2:
+
+Java:
+if (index >= 2)
+
+C++:
+if (index >= 2)
+
+Node.js / JavaScript:
+if (index >= 2)
+
+All express the same condition: apply the Fibonacci formula when index is 2 or greater.
