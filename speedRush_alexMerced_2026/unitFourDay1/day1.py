@@ -272,7 +272,7 @@ def makePerson2(name, age):
 
 
 # Ask the user for their name
-userName = input("Statcha name, Ock: ")
+userName = input("Statecha name, Ock: ")
 
 # Ask the user for their age
 userAge = input("How old are you: ")
@@ -281,6 +281,7 @@ userAge = input("How old are you: ")
 # Call makePerson and pass the user's information
 # The function returns a dictionary
 print("User name and age is:", makePerson(userName, userAge))
+print(makePerson(userName,userAge)["age"])
 
 
 # Another way: Call makePerson2
